@@ -18,12 +18,12 @@ int get_width(const char *format, int *i, va_list list)
 		if (is_digit(format[curr_i]))
 		{
 			width *= 10;
-			width += fornat[curr_i] - '0';
+			width += format[curr_i] - '0';
 		}
-		else if *(formatt[curr_i] == '*')
+		else if (format[curr_i] == '*')
 		{
 			curr_i++;
-			width = va_arg(int, list);
+			width = va_arg(list, int);
 			break;
 		}
 		else

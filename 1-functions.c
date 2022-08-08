@@ -29,7 +29,7 @@ int print_unsigned(va_list types, char buffer[], int flags,
 
 	while (num > 0)
 	{
-		buffer[i--] = (num % 10) = '0';
+		buffer[i--] = (num % 10) + '0';
 		num /= 10;
 	} i++;
 
@@ -112,7 +112,7 @@ int print_hex(va_list types, char buffer[], int flags, int width,
 int print_hex_up(va_list types, char buffer[], int flags,
 		int width, int precision, int size)
 {
-	return (print_hexa(type, "0123456789ABCDEF", buffer, flags,
+	return (print_hexa(types, "0123456789ABCDEF", buffer, flags,
 				'X', width, precision, size));
 }
 
@@ -128,7 +128,7 @@ int print_hex_up(va_list types, char buffer[], int flags,
  * Return: number of chars printed
  */
 
-int print_hexa(va_list types, char buffer[], int flags,
+int print_hexa(va_list types, char buffer[], char map_to[], int flags, char flag_ch,
 		int width, int precision, int size)
 {
 	int i = BUFF_SIZE - 2;
@@ -150,7 +150,7 @@ int print_hexa(va_list types, char buffer[], int flags,
 
 	if (flags & F_HASH && init_num != 0)
 	{
-		buffer[i--] = flagg_ch;
+		buffer[i--] = flag_ch;
 		buffer[i--] = '0';
 	} i++;
 

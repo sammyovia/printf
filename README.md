@@ -35,7 +35,7 @@
 Handle the following custom conversion specifiers:
 
   .b: the unsigned int argument is converted to binary
-  
+
 3. What one has not experienced, one will never understand in print
 Handle the following conversion specifiers:
   .u
@@ -93,7 +93,7 @@ Handle the following custom conversion specifier:
 14. The flood of print has turned reading into a process of gulping rather than savoring
 Handle the following custom conversion specifier:
   .R: prints the rot13'ed string
-  
+
 15. *
 All the above options work well together.
 
