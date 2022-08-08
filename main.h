@@ -62,9 +62,9 @@ int print_unsigned(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 int print_octal(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
-int print_hexadecimal(va_list types, char buffer[],
+int print_hex(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
-int print_hexa_upper(va_list types, char buffer[],
+int print_hex_up(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 
 int print_hexa(va_list types, char map_to[],
@@ -75,7 +75,7 @@ int print_non_printable(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 
 /* Funcion to print memory address */
-int print_pointer(va_list types, char buffer[],
+int print_point(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 
 /* Funciotns to handle other specifiers */
@@ -85,11 +85,11 @@ int get_precision(const char *format, int *i, va_list list);
 int get_size(const char *format, int *i);
 
 /*Function to print string in reverse*/
-int print_reverse(va_list types, char buffer[],
+int print_rev(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 
 /*Function to print a string in rot 13*/
-int print_rot13string(va_list types, char buffer[],
+int print_rot13(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 
 /* width handler */
