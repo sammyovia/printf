@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * handle_print - Prints an argument based on its type
- * @fmt: Formatted string in which is to print the arguments.
+ * @fmt: Formatted string in which to print the arguments.
  * @list: List of arguments to be printed.
  * @ind: ind.
  * @buffer: Buffer array to handle print.
@@ -16,11 +16,11 @@ int handle_print(const char *fmt, int *ind, va_list list, char buffer[],
 {
 	int i, unknow_len = 0, printed_chars = -1;
 	fmt_t fmt_types[] = {
-		{'c', print_c}, {'s', print_strings}, {'%', print_mod},
-		{'i', print_int}, {'d', print_int}, {'b', print_bin},
-		{'u', print_unsigned}, {'o', print_octal}, {'x', print_hex},
-		{'X', print_hex_up}, {'p', print_point}, {'S', print_non_printable},
-		{'r', print_rev}, {'R', print_rot13}, {'\0', NULL}
+		{'c', print_char}, {'s', print_string}, {'%', print_percent},
+		{'i', print_int}, {'d', print_int}, {'b', print_binary},
+		{'u', print_unsigned}, {'o', print_octal}, {'x', print_hexadecimal},
+		{'X', print_hexa_upper}, {'p', print_pointer}, {'S', print_non_printable},
+		{'r', print_reverse}, {'R', print_rot13string}, {'\0', NULL}
 	};
 	for (i = 0; fmt_types[i].fmt != '\0'; i++)
 		if (fmt[*ind] == fmt_types[i].fmt)
