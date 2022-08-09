@@ -78,17 +78,6 @@ or
 |**r**|The  argument received is expected to be a pointer type char * to an array of characters.  Characters from this array are printed in reverse order up to (but not including) a null byte  ('\0').  |
 |**R**|The argument received is expected to be a pointer type char * to an array of characters.  Characters from this array  are  encoded  to  ROT13  and printed in order up to (but not including a null byte  ('\0').  |
 
-# Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine (Linux distro) for development and testing purposes.
-
-## **Installing**
-
-You will need to clone the repository of the project from Github. This will contain the _printf function and all of its dependencies. No main.c file will be provided for testing, so you will need to create one.
-
-    git clone https://github.com/sammyovia/printf.git
-
-After cloning the repository you will have a folder called printf. In here there will be several files that allow the function to work.
-
 ```Submitted by```
-```IGBINOVIA SAMUEL and OSUNDE OSARIEME NAOMI```
+``` Samuel E. Igbinovia and Osarieme Naomi Osunde```
+
